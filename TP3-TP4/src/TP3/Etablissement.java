@@ -132,7 +132,7 @@ public class Etablissement {
         //Ajouter un magazine à l'établissement
     public boolean ajouterMagazine(String description, double prixInitial, int nbExemplaires, String issn, String periodicite, String datePublication) {
         // Création d'un objet Magazine avec les informations fournies
-        Magazine magazine = new Magazine(description, prixInitial, nbExemplaires, issn, periodicite, datePublication);
+        magazine magazine = new magazine(description, prixInitial, nbExemplaires, issn, periodicite, datePublication);
         // Ajout du magazine au tableau Articles via la méthode ajouterArticle
         return ajouterArticle(magazine);
     }
@@ -140,7 +140,7 @@ public class Etablissement {
         //Ajouter un livre à l'établissement
     public boolean ajouterLivre(String description, double prixInitial, int nbExemplaires, String isbn, int nbPages) {
         // Création d'un objet Livre avec les informations fournies
-        Livre livre = new Livre(description, prixInitial, nbExemplaires, isbn, nbPages);
+        livre livre = new livre(description, prixInitial, nbExemplaires, isbn, nbPages);
         // Ajout du livre au tableau Articles via la méthode ajouterArticle
         return ajouterArticle(livre);
     }
@@ -148,7 +148,7 @@ public class Etablissement {
         //Ajouter un manuel scolaire à l'établissement
     public boolean ajouterManuel(String description, double prixInitial, int nbExemplaires, String isbn, int nbPages, String matiere, String niveauScolaire) {
         // Création d'un objet ManuelScolaire avec les informations fournies
-        ManuelScolaire manuel = new ManuelScolaire(description, prixInitial, nbExemplaires, isbn, nbPages, matiere, niveauScolaire);
+        manuel manuel = new manuel(description, prixInitial, nbExemplaires, isbn, nbPages, matiere, niveauScolaire);
         // Ajout du manuel au tableau Articles 
         return ajouterArticle(manuel);
     }
